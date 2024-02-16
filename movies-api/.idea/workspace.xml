@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8216455e-a9a9-4cde-b31c-0c36030ba70b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/movies/Movie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/MovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/movies/MovieController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/MovieRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/movies/MovieRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/MovieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/movies/MovieService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/MoviesApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/movies/MoviesApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/movies/Review.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/ReviewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/movies/ReviewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/ReviewRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/movies/ReviewRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/ReviewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/movies/ReviewService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/movies/MoviesApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/movies/MoviesApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
