@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8216455e-a9a9-4cde-b31c-0c36030ba70b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movies-ui/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../movies-ui/src/components/header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movies-ui/src/components/register/Register.css" beforeDir="false" afterPath="$PROJECT_DIR$/../movies-ui/src/components/register/Register.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -49,7 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/chiragnayak/Desktop/New Folder/movies-api",
+    "last_opened_file_path": "/home/chiragnayak/Desktop/movies/movies-api",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",

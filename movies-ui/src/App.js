@@ -6,6 +6,7 @@ import {Routes,Route} from 'react-router-dom';
 import Home from './components/home/Home';
 import Header from './components/header/Header';
 import Trailer from './components/trailer/Trailer';
+import Register from './components/register/Register';
 function App() {
   const [movies,setMovies] = useState([]);
   const getMovies = async()=>{
@@ -27,6 +28,7 @@ function App() {
       <Route path="/" element={<Layout/>}>
         <Route path="/" element={<Home movies={movies}/>}/>
         <Route path="/Trailer/:ytTrailerId" element={<Trailer/>}/>
+        <Route path="/login" element={<Register/>}/>
       </Route>
     </Routes>
     </div>

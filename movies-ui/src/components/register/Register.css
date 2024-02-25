@@ -1,0 +1,74 @@
+.form-container {
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212;
+    width: 500px;
+    padding: 80px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.username-container,
+.password-container {
+    margin-top: 12px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+    width: 300px;
+}
+
+.username-container::placeholder,
+.password-container::placeholder {
+    font-size: 12px;
+}
+
+.button-container {
+    margin-top: 12px;
+    border: 1px solid #BB2D3B;
+    background-color: black;
+    color: #BB2D3B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.button-container:hover {
+    color: white;
+    background-color: #BB2D3B;
+}
+
+.image-container {
+    height: 600px;
+    width: 400px;
+}
+
+.horizontal-line {
+    width: 130px;/* Adjust the width as needed */
+    height: 1px; /* Adjust the height as needed */
+    background-color: #ccc; /* Adjust the color as needed */
+    margin: 10px 10px; /* Adjust the margin as needed */
+}
+.register-container {
+    width : 300px;
+    background-color : #BB2D3B;
+    color : white;
+    border : 1px solid #BB2D3B;
+}
+
+.register-container:hover {
+    opacity : 85%;
+}
