@@ -31,7 +31,7 @@ const Register = () => {
       console.log(response.data);
       setIsLoading(false)
       toast.success('User created successfully');
-      navigate('/home')
+      navigate('/')
        // Display success toast
     } catch (error) {
       console.error('Error occurred:', error);
