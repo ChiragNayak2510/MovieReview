@@ -6,7 +6,12 @@ import {Routes,Route} from 'react-router-dom';
 import Home from './components/home/Home';
 import Header from './components/header/Header';
 import Trailer from './components/trailer/Trailer';
+import Login from './components/login/Login';
 import Register from './components/register/Register';
+import React from 'react';
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
   const [movies,setMovies] = useState([]);
   const getMovies = async()=>{
@@ -23,12 +28,14 @@ function App() {
   },[])
   return (
     <div className="App">
+    <ToastContainer />
     <Header/>
     <Routes>
       <Route path="/" element={<Layout/>}>
         <Route path="/" element={<Home movies={movies}/>}/>
         <Route path="/Trailer/:ytTrailerId" element={<Trailer/>}/>
-        <Route path="/login" element={<Register/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/register" element={<Register/>}/>
       </Route>
     </Routes>
     </div>

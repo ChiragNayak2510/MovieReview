@@ -1,6 +1,5 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faVideoSlash } from '@fortawesome/free-solid-svg-icons'
+import { BiSolidMoviePlay } from "react-icons/bi";
 import Button  from 'react-bootstrap/Button'
 import { Container } from 'react-bootstrap'
 import Nav from 'react-bootstrap/Nav'
@@ -14,7 +13,7 @@ const Header = () => {
         <Container 
         fluid>
           <Navbar.Brand href="/" style={{"color":'gold'}}>
-            <FontAwesomeIcon icon={faVideoSlash}/>Gold
+            <BiSolidMoviePlay style={{color : "#BB2D3B", fontSize : "3rem"}}/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbarScroll'/>
           <Navbar.Collapse id = "navbarScroll">
