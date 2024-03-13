@@ -1,8 +1,13 @@
 package com.example.movies.services;
 
+import com.example.movies.auth.AuthenticationRequest;
+import com.example.movies.auth.AuthenticationResponse;
+import com.example.movies.auth.RegisterRequest;
 import com.example.movies.entities.User;
 import com.example.movies.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
@@ -18,22 +23,51 @@ public class UserService {
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
-    public Optional<User> createUser(Map<String, String> payload) {
-        String name = payload.get("name");
-        String username = payload.get("username");
-        String email = payload.get("email");
-        String password = payload.get("password");
-        String profileImage = payload.get("profileImage");
+    @Autowired
+    private JWTService jwtService;
+    private AuthenticationManager authenticationManager;
+
+    private AuthenticationResponse authenticationResponse;
+
+    public AuthenticationResponse createUser(RegisterRequest request) {
+        String name = request.name;
+        String username = request.username;
+        String email = request.email;
+        String password = passwordEncoder.encode(request.password);
+        String profileImage = request.profileImage;
 
         // Check if user with given username or email already exists
         if (userRepository.existsByUsernameOrEmail(username, email)) {
-            return Optional.empty();
+            return new AuthenticationResponse();
         }
 
-        String hashedPassword = hash(password);
-        User newUser = new User(name, username, email, hashedPassword, profileImage);
-        return Optional.of(userRepository.save(newUser));
+        User newUser = new User(name, username, email, password, profileImage);
+        userRepository.save(newUser);
+        String jwtToken = jwtService.generateToken(newUser);
+        return AuthenticationResponse.builder()
+                .token(jwtToken)
+                .build();
     }
+
+    public AuthenticationResponse authenticateUser(AuthenticationRequest request){
+
+        authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(
+                        request.username,
+                        request.password
+                )
+        );
+        Optional<User> user = userRepository.findByUsernameOrEmail(request.username,"");
+        if(user.isPresent()){
+            String jwtToken = jwtService.generateToken(user.get());
+            return AuthenticationResponse.builder()
+                    .token(jwtToken)
+                    .build();
+        }
+        return new AuthenticationResponse();
+    }
+
+
 
     public String hash(String password) {
         return passwordEncoder.encode(password);
