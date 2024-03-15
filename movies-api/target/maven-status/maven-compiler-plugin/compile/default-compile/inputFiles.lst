@@ -1,9 +1,20 @@
-/home/chiragnayak/Desktop/New Folder/movies-api/src/main/java/com/example/movies/Review.java
-/home/chiragnayak/Desktop/New Folder/movies-api/src/main/java/com/example/movies/ReviewController.java
-/home/chiragnayak/Desktop/New Folder/movies-api/src/main/java/com/example/movies/ReviewRepository.java
-/home/chiragnayak/Desktop/New Folder/movies-api/src/main/java/com/example/movies/MoviesApplication.java
-/home/chiragnayak/Desktop/New Folder/movies-api/src/main/java/com/example/movies/Movie.java
-/home/chiragnayak/Desktop/New Folder/movies-api/src/main/java/com/example/movies/MovieService.java
-/home/chiragnayak/Desktop/New Folder/movies-api/src/main/java/com/example/movies/ReviewService.java
-/home/chiragnayak/Desktop/New Folder/movies-api/src/main/java/com/example/movies/MovieController.java
-/home/chiragnayak/Desktop/New Folder/movies-api/src/main/java/com/example/movies/MovieRepository.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/repositories/ReviewRepository.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/entities/User.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/controllers/MovieController.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/services/JWTService.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/MoviesApplication.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/auth/AuthenticationResponse.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/services/ReviewService.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/config/JWTAuthenticationFilter.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/entities/Review.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/entities/Movie.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/config/SecurityConfig.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/services/MovieService.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/controllers/AuthenticationController.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/auth/RegisterRequest.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/controllers/ReviewController.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/repositories/UserRepository.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/services/UserService.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/config/ApplicationConfig.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/auth/AuthenticationRequest.java
+/home/chiragnayak/Desktop/movies/movies-api/src/main/java/com/example/movies/repositories/MovieRepository.java

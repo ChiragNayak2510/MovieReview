@@ -12,7 +12,21 @@ const Reviews = ({getMovieData,movie,reviews,setReviews}) => {
     const movieId = params.movieId;
     useEffect(()=>{
         getMovieData(movieId);
-    },[])
+    })
+
+    const addReview = async(e)=>{
+        e.preventDefault();
+        const rev = revText.current;
+        try{
+        const response = await api.post("localhost:8000/api/v1/reviews",{reviewBody : rev.value,imdbId : movieId});
+        console.log(response)
+        const updatedReviews = [...reviews,{body:rev.value}];
+        rev.value = "";
+        setReviews(updatedReviews);
+        }catch(err){
+            console.log(err);
+        }
+    }
   return (
     <div>
         <Container>
@@ -29,8 +43,36 @@ const Reviews = ({getMovieData,movie,reviews,setReviews}) => {
                 <Row>
                     <Col>
                     <ReviewForm handleSubmit={addReview} revText={revText} labelText="Write a review?"/>
-                    </Col></Row></>
+                    </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <hr />
+                        </Col>
+                    </Row>
+                    </>
+                }
+                {
+                    reviews?.map((r)=>{
+                        return (
+                            <>
+                            <Row>
+                                <Col>{r.body}</Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <hr />
+                                </Col>
+                            </Row>
+                            </>
+                        )
+                    })
                 }       
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <hr />
                 </Col>
             </Row>
         </Container>

@@ -1,5 +1,9 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom'
+import React, { useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import BeatLoader from 'react-spinners/BeatLoader';
 import {
     FormContainer,
     MainContainer,
@@ -12,20 +16,54 @@ import {
 } from '../styledComponents/LoginStyledComponent.js'; // Import styled components
 
 const Login = () => {
-    const handleSubmit = () => {
-        // Add your form submission logic here
-    };
+    const [username,setUsername] = useState('')
+    const [password,setPassword] = useState('')
+    const [isLoading,setIsLoading] = useState(false)
+
+    const navigate = useNavigate()
+    const handleSubmit = async (e) => {
+    e.preventDefault();
+    if(!username || !password){
+        toast.error('All fields are mandatory');
+        return;
+    }
+    setIsLoading(true);
+    try {
+      const response = await axios.post('http://localhost:8080/api/v1/auth/login', 
+      {
+        username : username,
+        password : password
+      });
+      console.log(response.data);
+      toast.success('Login successful');
+      navigate('/')
+       // Display success toast
+    } catch (error) {
+      console.error('Error occurred:', error);
+      toast.error('Invalid credentials'); // Display error toast
+    }
+    finally {
+        setIsLoading(false)
+    } 
+  }
 
     return (
         
         <FormContainer>
             <ImageContainer src="halo.jpg" alt="welcome image" />
             <MainContainer>
+            {isLoading && (
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+            <BeatLoader size={15} color={'#BB2D3B'} loading={isLoading} />
+            </div>
+            )}
+            {!isLoading && (
+                <>
                 <h3>Sign In</h3>
                 <form onSubmit={handleSubmit}>
                     <InputContainer>
-                        <Input type="text" placeholder="Enter username" />
-                        <Input type="password" placeholder="Enter password" />
+                        <Input type="text" placeholder="Enter username" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                        <Input type="password" placeholder="Enter password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                     </InputContainer>
                     <Button type="submit">Login</Button>
                 </form>
@@ -37,6 +75,8 @@ const Login = () => {
                 <NavLink to="/register">
                 <RegisterContainer>Create a new account</RegisterContainer>
                 </NavLink>
+                </>
+            )}
             </MainContainer>
         </FormContainer>
     );

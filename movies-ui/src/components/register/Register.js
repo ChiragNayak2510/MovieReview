@@ -6,6 +6,7 @@ import BeatLoader from 'react-spinners/BeatLoader';
 import { FormContainer, MainContainer, Overlay, Input, FileInput, ImagePlaceholder, Button, InputContainer, ImageContainer } from "../styledComponents/RegisterStyledComponent.js";
 import { useNavigate } from 'react-router-dom';
 const Register = () => {
+  const [name, setName] = useState('');
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -14,11 +15,12 @@ const Register = () => {
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(!username || !email || !password || !profileImage){
+    if(!name || !username || !email || !password || !profileImage){
         toast.error('All fields are mandatory');
         return;
     }
     const userData = {
+      name : name,
       username: username,
       email: email,
       password: password,
@@ -27,7 +29,7 @@ const Register = () => {
 
     try {
       setIsLoading(true);
-      const response = await axios.post('http://localhost:8080/api/v1/users', userData);
+      const response = await axios.post('http://localhost:8080/api/v1/auth/register', userData);
       console.log(response.data);
       setIsLoading(false)
       toast.success('User created successfully');
@@ -66,6 +68,7 @@ const Register = () => {
             <h3>Create a new account</h3>
             <form onSubmit={handleSubmit}>
               <InputContainer>
+              <Input type="text" placeholder="Enter name" value={name} onChange={(e) => setName(e.target.value)} />
                 <Input type="text" placeholder="Enter username" value={username} onChange={(e) => setUsername(e.target.value)} />
                 <Input type="email" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 <Input type="password" placeholder="Enter password" value={password} onChange={(e) => setPassword(e.target.value)} />

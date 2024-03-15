@@ -25,8 +25,8 @@ public class UserService {
 
     @Autowired
     private JWTService jwtService;
+    @Autowired
     private AuthenticationManager authenticationManager;
-
     private AuthenticationResponse authenticationResponse;
 
     public AuthenticationResponse createUser(RegisterRequest request) {

@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export default axios.create({
-    baseURL : 'https://movies-api-ftzg.onrender.com'
+    baseURL : 'http://localhost:8000/'
 });

@@ -11,15 +11,30 @@ import Register from './components/register/Register';
 import React from 'react';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Reviews from './components/reviews/Reviews';
 
 function App() {
   const [movies,setMovies] = useState([]);
+  const [movie,setMovie] = useState()
+  const [reviews,setReviews] = useState()
   const getMovies = async()=>{
     try{
       const response = await api.get("/api/v1/movies");
       console.log(response.data)
       setMovies(response.data)
     }catch(err){
+      console.log(err)
+    }
+  }
+
+  const getMovieData = async(movieId) =>{
+    try{
+      const response = await api.get(`localhost:8000/api/v1/movies/${movieId}`);
+      const singleMovie = response.data;
+      setMovie(singleMovie)
+      setReviews(singleMovie.reviews)
+    }
+    catch(err){
       console.log(err)
     }
   }
@@ -36,6 +51,7 @@ function App() {
         <Route path="/Trailer/:ytTrailerId" element={<Trailer/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
+        <Route path="/Reviews/:movieId" element={<Reviews getMovieData={getMovieData} reviews={reviews} movie={movie} setReviews={setReviews}/>}/>
       </Route>
     </Routes>
     </div>

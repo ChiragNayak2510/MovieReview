@@ -5,24 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8216455e-a9a9-4cde-b31c-0c36030ba70b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/auth/AuthenticationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/auth/AuthenticationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/auth/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/config/ApplicationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/config/JWTAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/services/JWTService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/movies/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/movies/controllers/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/controllers/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/movies/controllers/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/movies/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/movies/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/config/ApplicationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/movies/config/JWTAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/config/JWTAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/movies/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/movies/controllers/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/controllers/AuthenticationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/movies/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/SecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/controllers/RegisterController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/controllers/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/movies/entities/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/config/ApplicationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/movies/config/ApplicationConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/config/JWTAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/movies/config/JWTAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/movies/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/controllers/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/movies/controllers/AuthenticationController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/movies/services/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/movies-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/movies-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/movies-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/movies-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.movies.MoviesApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.movies.MoviesApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.movies.MoviesApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.movies.MoviesApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movies-ui/src/components/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../movies-ui/src/components/login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movies-ui/src/components/register/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../movies-ui/src/components/register/Register.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +84,23 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="MoviesApplication" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.movies.MoviesApplication" />
+      <module name="movies" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="movies-api" />
       <method v="2">
