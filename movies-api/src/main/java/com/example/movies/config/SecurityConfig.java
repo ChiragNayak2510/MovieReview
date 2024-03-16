@@ -26,10 +26,10 @@ public class SecurityConfig {
                 http
                         // CSRF configuration
                         .csrf(csrf -> csrf
-                                .ignoringRequestMatchers("/api/v1/auth/*","/api/v1/*")) // Disable CSRF protection for /api/v1/users endpoint
+                                .ignoringRequestMatchers("/api/v1/auth/*","/api/v1/*","/api/v1/movies/*")) // Disable CSRF protection for /api/v1/users endpoint
                         // Authorization configuration
                         .authorizeRequests(requests -> requests
-                                .requestMatchers("/api/v1/auth/*","/api/v1/movies","/api/v1/reviews","/api/v1/movies/*","").permitAll() // Permit access to specific URL patterns
+                                .requestMatchers("/api/v1/auth/*","/api/v1/movies","/api/v1/reviews","/api/v1/movies/*").permitAll() // Permit access to specific URL patterns
                                 .anyRequest().authenticated()) // Require authentication for any other request
                         // Session management configuration
                         .sessionManagement(sessionManagement -> sessionManagement

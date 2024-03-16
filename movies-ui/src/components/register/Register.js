@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from "axios";
+import api from '../../api/axiosConfig.js';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import BeatLoader from 'react-spinners/BeatLoader';
@@ -29,7 +29,7 @@ const Register = () => {
 
     try {
       setIsLoading(true);
-      const response = await axios.post('http://localhost:8080/api/v1/auth/register', userData);
+      const response = await api.post('api/v1/auth/register', userData);
       console.log(response.data);
       setIsLoading(false)
       toast.success('User created successfully');

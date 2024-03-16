@@ -27,6 +27,7 @@ public class User implements UserDetails {
     private String email;
 
     private String password;
+
     @DocumentReference
     private List<Movie> watchList;
 

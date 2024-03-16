@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import api from '../../api/axiosConfig.js';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import BeatLoader from 'react-spinners/BeatLoader';
@@ -29,7 +29,7 @@ const Login = () => {
     }
     setIsLoading(true);
     try {
-      const response = await axios.post('http://localhost:8080/api/v1/auth/login', 
+      const response = await api.post('/api/v1/auth/login', 
       {
         username : username,
         password : password
