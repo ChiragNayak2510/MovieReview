@@ -12,13 +12,14 @@ const Reviews = ({getMovieData,movie,reviews,setReviews}) => {
     const movieId = params.movieId;
     useEffect(()=>{
         getMovieData(movieId);
-    })
-
+    }
+    )
+    const currentUser = "userTest";
     const addReview = async(e)=>{
         e.preventDefault();
         const rev = revText.current;
         try{
-        const response = await api.post("localhost:8000/api/v1/reviews",{reviewBody : rev.value,imdbId : movieId});
+        const response = await api.post("/api/v1/reviews",{reviewBody : rev.value,imdbId : movieId,username:currentUser});
         console.log(response)
         const updatedReviews = [...reviews,{body:rev.value}];
         rev.value = "";
@@ -53,10 +54,11 @@ const Reviews = ({getMovieData,movie,reviews,setReviews}) => {
                     </>
                 }
                 {
-                    reviews?.map((r)=>{
-                        return (
-                            <>
+                reviews?.map((r, index) => {
+                    return (
+                        <div key={index}> {/* Use the index as the key */}
                             <Row>
+                                <Col>{r.user?.username}</Col>
                                 <Col>{r.body}</Col>
                             </Row>
                             <Row>
@@ -64,10 +66,10 @@ const Reviews = ({getMovieData,movie,reviews,setReviews}) => {
                                     <hr />
                                 </Col>
                             </Row>
-                            </>
-                        )
-                    })
-                }       
+                        </div>
+                    )
+                })
+                }     
                 </Col>
             </Row>
             <Row>

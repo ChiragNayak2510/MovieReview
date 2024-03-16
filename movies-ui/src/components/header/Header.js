@@ -23,7 +23,7 @@ const Header = () => {
                   <NavLink className="nav-link" to="/">Home</NavLink>
                   <NavLink className="nav-link" to="/watchlist">WatchList</NavLink>
                 </Nav>
-              <NavLink to="/login">
+              <NavLink to="/Login">
               <Button variant="danger" color="error" className='me-2'>Sign In</Button>
               </NavLink>
           </Navbar.Collapse>

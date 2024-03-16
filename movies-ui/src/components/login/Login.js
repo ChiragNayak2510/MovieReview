@@ -72,7 +72,7 @@ const Login = () => {
                     <p>OR</p>
                     <HorizontalLine />
                 </div>
-                <NavLink to="/register">
+                <NavLink to="/Register">
                 <RegisterContainer>Create a new account</RegisterContainer>
                 </NavLink>
                 </>
