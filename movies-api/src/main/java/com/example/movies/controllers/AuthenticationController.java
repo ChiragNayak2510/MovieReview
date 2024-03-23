@@ -3,6 +3,9 @@ package com.example.movies.controllers;
 import com.example.movies.auth.AuthenticationRequest;
 import com.example.movies.auth.AuthenticationResponse;
 import com.example.movies.auth.RegisterRequest;
+import com.example.movies.entities.User;
+import com.example.movies.repositories.UserRepository;
+import com.example.movies.services.JWTService;
 import com.example.movies.services.UserService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
@@ -13,6 +16,9 @@ import org.springframework.security.authentication.AuthenticationManager;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+import java.util.Optional;
+
 
 @RestController
 @RequestMapping("/api/v1/auth")
@@ -21,7 +27,10 @@ import org.springframework.web.bind.annotation.*;
 public class AuthenticationController {
     @Autowired
     private UserService userService;
-
+    @Autowired
+    private JWTService jwtService;
+    @Autowired
+    private UserRepository userRepository;
 
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> insertUser(@RequestBody RegisterRequest request, HttpServletResponse response){
@@ -51,6 +60,20 @@ public class AuthenticationController {
             return ResponseEntity.ok(jwtToken);
         } else {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null); // Or any other appropriate response
+        }
+    }
+
+    @PostMapping
+    public ResponseEntity<User> getUser(@RequestBody Map<String,String> payload){
+        String jwt = payload.get("token");
+        String username = jwtService.extractUsername(jwt);
+        Optional<User> user = userRepository.findByUsernameOrEmail(username,"");
+
+        if(user.isPresent()){
+            return ResponseEntity.ok(user.get());
+        }
+        else{
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
 }

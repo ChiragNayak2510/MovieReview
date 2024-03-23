@@ -7,10 +7,22 @@
     <list default="true" id="8216455e-a9a9-4cde-b31c-0c36030ba70b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/movies/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/movies/controllers/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/controllers/ReviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/movies/entities/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/entities/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/movies/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/movies/services/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/services/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/movies/controllers/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/movies/controllers/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/movies/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/movies/controllers/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/movies/controllers/AuthenticationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/movies-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/movies-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/movies-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.movies.MoviesApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.movies.MoviesApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.movies.MoviesApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.movies.MoviesApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movies-ui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../movies-ui/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movies-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../movies-ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movies-ui/public/registerBackdrop.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../movies-ui/public/registerBackdrop.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movies-ui/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../movies-ui/src/components/header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movies-ui/src/components/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../movies-ui/src/components/login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movies-ui/src/components/register/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../movies-ui/src/components/register/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movies-ui/src/components/reviews/Reviews.js" beforeDir="false" afterPath="$PROJECT_DIR$/../movies-ui/src/components/reviews/Reviews.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movies-ui/src/components/styledComponents/LoginStyledComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/../movies-ui/src/components/styledComponents/LoginStyledComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movies-ui/src/components/styledComponents/RegisterStyledComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/../movies-ui/src/components/styledComponents/RegisterStyledComponent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +64,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.MoviesApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.movies [install].executor&quot;: &quot;Run&quot;,
     &quot;Maven.movies [package].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,

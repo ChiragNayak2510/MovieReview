@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
 export const FormContainer = styled.div`
-    margin-left: 50px;
     display: flex;
     justify-content: center;
     padding-top: 100px;
     position: relative;
-    background-image: url('registerBackdrop.jpg');
+    background-image: url('background.png');
     background-size: cover;
     height: 93vh;
 `;

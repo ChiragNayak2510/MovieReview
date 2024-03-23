@@ -1,22 +1,13 @@
 import styled from 'styled-components';
 
 export const FormContainer = styled.div`
-    margin-left: 50px;
     display: flex;
     justify-content: center;
     padding-top: 100px;
     position: relative;
-    background-image: url('registerBackdrop.jpg');
+    background-image: url('background.png');
     background-size: cover;
     height: 93vh;
-`;
-export const Overlay = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
 `;
 
 export const MainContainer = styled.div`

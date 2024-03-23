@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import ReviewForm from "../reviewForm/ReviewForm";
 import { useState } from "react";
+import useCurrentUserStore from '../../store/useStore.js';
 const Reviews = () => {
     const revText = useRef();
     let params = useParams();
@@ -25,12 +26,12 @@ const Reviews = () => {
         getMovieData(movieId)
     },[])
 
-    const currentUser = "userTest";
+    const currentUser = useCurrentUserStore((state) => state.currentUser);
     const addReview = async (e) => {
         e.preventDefault();
         const rev = revText.current;
         try {
-            const response = await api.post("/api/v1/reviews", { reviewBody: rev.value, imdbId: movieId, username: currentUser });
+            const response = await api.post("/api/v1/reviews", { reviewBody: rev.value, imdbId: movieId, username: currentUser.username });
             console.log(response);
             const updatedReviews = [...reviews, { body: rev.value,username : currentUser}];
             rev.value = "";

@@ -5,6 +5,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import BeatLoader from 'react-spinners/BeatLoader';
 import { FormContainer, MainContainer, Overlay, Input, FileInput, ImagePlaceholder, Button, InputContainer, ImageContainer } from "../styledComponents/RegisterStyledComponent.js";
 import { useNavigate } from 'react-router-dom';
+import useCurrentUserStore from '../../store/useStore.js';
+import axios from 'axios';
 const Register = () => {
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
@@ -12,6 +14,7 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const [profileImage, setProfileImage] = useState(null);
   const [isLoading,setIsLoading] = useState(false)
+  const setCurrentUser = useCurrentUserStore((state) => state.setCurrentUser);
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,7 +33,10 @@ const Register = () => {
     try {
       setIsLoading(true);
       const response = await api.post('api/v1/auth/register', userData);
-      console.log(response.data);
+      const userResponse = await api.post('/api/v1/auth',{
+        token : response.data.token
+      })
+      setCurrentUser(userResponse.data)
       setIsLoading(false)
       toast.success('User created successfully');
       navigate('/')

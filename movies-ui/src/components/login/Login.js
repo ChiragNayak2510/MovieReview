@@ -4,6 +4,8 @@ import api from '../../api/axiosConfig.js';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import BeatLoader from 'react-spinners/BeatLoader';
+import axios from 'axios';
+import useCurrentUserStore from '../../store/useStore.js';
 import {
     FormContainer,
     MainContainer,
@@ -19,7 +21,7 @@ const Login = () => {
     const [username,setUsername] = useState('')
     const [password,setPassword] = useState('')
     const [isLoading,setIsLoading] = useState(false)
-
+    const setCurrentUser = useCurrentUserStore((state) => state.setCurrentUser);
     const navigate = useNavigate()
     const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,7 +36,12 @@ const Login = () => {
         username : username,
         password : password
       });
-      console.log(response.data);
+    //   console.log(response.data);
+      const userResponse = await api.post('/api/v1/auth',{
+        token : response.data.token
+      })
+      console.log(userResponse)
+      setCurrentUser(userResponse.data)
       toast.success('Login successful');
       navigate('/')
        // Display success toast

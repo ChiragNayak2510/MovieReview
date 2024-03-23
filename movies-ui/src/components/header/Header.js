@@ -5,8 +5,10 @@ import { Container } from 'react-bootstrap'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { NavLink } from 'react-router-dom'
-
+import useCurrentUserStore from '../../store/useStore';
 const Header = () => {
+  const currentUser = useCurrentUserStore((state) => state.currentUser);
+  console.log(currentUser)
   return (
     <div>
       <Navbar bg="dark" variant='dark' expand="lg">
@@ -23,9 +25,12 @@ const Header = () => {
                   <NavLink className="nav-link" to="/">Home</NavLink>
                   <NavLink className="nav-link" to="/watchlist">WatchList</NavLink>
                 </Nav>
+              {currentUser && (<div className='me-2' style={{color:"white"}}>{currentUser?.username}</div>)}
+              {!currentUser && (
               <NavLink to="/Login">
               <Button variant="danger" color="error" className='me-2'>Sign In</Button>
               </NavLink>
+              )}
           </Navbar.Collapse>
         </Container>
       </Navbar>
