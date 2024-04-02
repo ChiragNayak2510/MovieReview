@@ -12,6 +12,7 @@ import React from 'react';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Reviews from './components/reviews/Reviews';
+import UserProvider from './userProvider/userProvider';
 
 function App() {
   const [movies,setMovies] = useState([]);
@@ -23,24 +24,14 @@ function App() {
     } catch (err) {
       console.log(err);
     }
-  }; // No dependencies for this function
-
-  // const getMovieData = async (movieId) => {
-  //   try {
-  //     const response = await api.get(`/api/v1/movies/${movieId}`);
-  //     const singleMovie = response.data;
-  //     setMovie(singleMovie);
-  //     setReviews(singleMovie.reviewIds);
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // }
-
+  }; 
+  
   useEffect(()=>{
     getMovies();
   },[])
   return (
     <div className="App">
+    <UserProvider/>
     <ToastContainer />
     <Header/>
     <Routes>

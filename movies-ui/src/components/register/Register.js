@@ -6,7 +6,7 @@ import BeatLoader from 'react-spinners/BeatLoader';
 import { FormContainer, MainContainer, Overlay, Input, FileInput, ImagePlaceholder, Button, InputContainer, ImageContainer } from "../styledComponents/RegisterStyledComponent.js";
 import { useNavigate } from 'react-router-dom';
 import useCurrentUserStore from '../../store/useStore.js';
-import axios from 'axios';
+import useSignIn from 'react-auth-kit/hooks/useSignIn';
 const Register = () => {
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
@@ -14,6 +14,7 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const [profileImage, setProfileImage] = useState(null);
   const [isLoading,setIsLoading] = useState(false)
+  const signIn = useSignIn()
   const setCurrentUser = useCurrentUserStore((state) => state.setCurrentUser);
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
@@ -36,6 +37,13 @@ const Register = () => {
       const userResponse = await api.post('/api/v1/auth',{
         token : response.data.token
       })
+      signIn({
+        auth: {
+            token: response.data.token,
+            type: 'Bearer'
+        },
+        userState: username
+    });
       setCurrentUser(userResponse.data)
       setIsLoading(false)
       toast.success('User created successfully');
